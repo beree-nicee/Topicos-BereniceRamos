@@ -1,62 +1,36 @@
 package moneda;
 public class Cajero {
-    private double cantidad;
+    private int cantidad;
 
-    public double getCantidad() {
+    public int getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(double cantidad) {
+    public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
-    public double Cambio(){
-        double cantidadR=cantidad;
-        double mon1,mon2,mon5,mon10;
-        double b20,b50,b100,b200,b500,b1000;
-        if(cantidad==0){
-                System.out.println("Termino el programa");
-                return 0;
+
+    public void cambio() {
+        int[] denominaciones = {1000, 500, 200, 100, 50, 20, 10, 5, 2, 1};
+        int cantidadR = cantidad;
+
+        System.out.println("\nDesglose de " + cantidad + " euros:");
+        
+        for (int i = 0; i < denominaciones.length; i++) {
+            int denom = denominaciones[i];
+            int num = cantidadR / denom;
+            if (num > 0) {
+                if (denom >= 20) {
+                    System.out.println(num + " billete de " + denom);
+                } else {
+                    System.out.println(num + " monedas de " + denom);
+                }
+                cantidadR %= denom;
             }
-            if(cantidadR>=1000){
-                b1000=cantidadR/1000;
-                cantidadR%=1000;
-            }
-            if(cantidadR>=500){
-                b500=cantidadR/500;
-                cantidadR%=500;
-            }
-            if(cantidadR>=200){
-                b200=cantidadR/200;
-                cantidadR%=200;
-            }
-            if(cantidadR>=100){
-                b100=cantidadR/100;
-                cantidadR%=100;
-            }
-            if(cantidad>=50){
-                b50=cantidadR/50;
-                cantidadR%=50;
-            }
-            if(cantidad>=20){
-                b20=cantidadR/20;
-                cantidadR%=20;
-            }
-            if(cantidad>=10){
-                mon10=cantidadR/10;
-                cantidadR%=10;
-            }
-            if(cantidad>=5){
-                mon5=cantidadR/5;
-                cantidadR%=5;
-            }
-            if(cantidad>=2){
-                mon2=cantidadR/2;
-                cantidadR%=2;
-            }
-            if(cantidad>=1){
-                mon1=cantidadR/1;
-                cantidadR%=1;
-            }
-            return cantidadR;
+        }
+
+        if (cantidadR == 0) {
+            System.out.println("Cambio completo entregado.\n");
+        }
     }
 }
