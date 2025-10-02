@@ -12,7 +12,7 @@ public class RestaurantView {
         if (menu != null) {
             System.out.println(menu.toString());
         } else {
-            System.out.println("❌ Error: No se puede mostrar un menú vacío");
+            System.out.println("Error: No se puede mostrar un menú vacío");
         }
     }
 
@@ -33,7 +33,7 @@ public class RestaurantView {
     }
 
     public void displayMenuComparison(List<RestaurantMenu> menus) {
-        displayTitle("📊 COMPARACIÓN DE MENÚS");
+        displayTitle("COMPARACIÓN DE MENÚS");
 
         for (int i = 0; i < menus.size(); i++) {
             System.out.println("OPCIÓN " + (i + 1) + ":");
@@ -46,13 +46,13 @@ public class RestaurantView {
 
     public void displayWelcome() {
         System.out.println("╔══════════════════════════════════════════════════════════╗");
-        System.out.println("║            🎉 ¡Bienvenido a Matt's Restaurant! 🎉       ║");
+        System.out.println("║              ¡Bienvenido a Matt's Restaurant!            ║");
         System.out.println("╚══════════════════════════════════════════════════════════╝");
     }
 
     public void displayGoodbye() {
         System.out.println("╔══════════════════════════════════════════════════════════╗");
-        System.out.println("║         🙏 ¡Gracias por visitarnos! 🙏                  ║");
+        System.out.println("║               ¡Gracias por visitarnos!                   ║");
         System.out.println("╚══════════════════════════════════════════════════════════╝");
     }
 }

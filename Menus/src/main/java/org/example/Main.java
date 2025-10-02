@@ -3,9 +3,6 @@ package org.example;
 import Controllers.RestaurantController;
 import Views.RestaurantView;
 
-/**
- * Clase principal - SOLUCIÓN COMPLETA
- */
 public class Main {
     public static void main(String[] args) {
         try {
@@ -19,10 +16,10 @@ public class Main {
             controller.runCompleteDemo();
 
         } catch (Exception e) {
-            System.err.println("❌ Error crítico en el sistema: " + e.getMessage());
+            System.err.println(" Error crítico en el sistema: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            System.out.println("\n🔚 Sistema finalizado correctamente.");
+            System.out.println("\n Sistema finalizado correctamente.");
         }
     }
 }

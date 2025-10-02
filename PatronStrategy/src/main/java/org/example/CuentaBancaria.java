@@ -1,5 +1,7 @@
 package org.example;
 
+
+//Aquí se calculan las comisiones
 public class CuentaBancaria {
     private ComisionStrategy estrategia;
 

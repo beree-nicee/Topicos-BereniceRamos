@@ -79,19 +79,19 @@ public class RestaurantMenu {
 
         StringBuilder sb = new StringBuilder();
         sb.append("╔══════════════════════════════════════════════════════════╗\n");
-        sb.append("║                    🍽️  MENÚ DEL RESTAURANTE              ║\n");
+        sb.append("║                        MENÚ DEL RESTAURANTE              ║\n");
         sb.append("╠══════════════════════════════════════════════════════════╣\n");
         sb.append(String.format("║ ID del Menú: %-43s ║\n", "#" + menuId));
         sb.append(String.format("║ Tipo: %-51s ║\n", menuType));
         sb.append("╠══════════════════════════════════════════════════════════╣\n");
-        sb.append(String.format("║ 🥗 Entrante: %-44s ║\n", starter));
-        sb.append(String.format("║ 🍖 Plato Principal: %-37s ║\n", mainCourse));
-        sb.append(String.format("║ 🍰 Postre: %-46s ║\n", dessert));
-        sb.append(String.format("║ 🥤 Bebida: %-46s ║\n", drink));
+        sb.append(String.format("║  Entrante: %-44s ║\n", starter));
+        sb.append(String.format("║  Plato Principal: %-37s ║\n", mainCourse));
+        sb.append(String.format("║  Postre: %-46s ║\n", dessert));
+        sb.append(String.format("║  Bebida: %-46s ║\n", drink));
         sb.append("╠══════════════════════════════════════════════════════════╣\n");
-        sb.append(String.format("║ 💰 Precio Total: $%-38.2f ║\n", totalPrice));
-        sb.append(String.format("║ ⏰ Tiempo de Preparación: %-31s ║\n", preparationTime));
-        sb.append(String.format("║ 📅 Hora del Pedido: %-36s ║\n", orderTime.format(formatter)));
+        sb.append(String.format("║  Precio Total: $%-38.2f ║\n", totalPrice));
+        sb.append(String.format("║  Tiempo de Preparación: %-31s ║\n", preparationTime));
+        sb.append(String.format("║  Hora del Pedido: %-36s ║\n", orderTime.format(formatter)));
         sb.append("╚══════════════════════════════════════════════════════════╝\n");
 
         return sb.toString();

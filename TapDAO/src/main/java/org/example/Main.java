@@ -30,7 +30,8 @@ public class Main {
             try {
                 switch (opcion) {
                     case 1 -> {
-                        //usando builder
+                        //usando
+                        /*
                         Libro libro = new Libro.LibroBuilder()
                                 .setTitulo("Cien años de soledad")
                                 .setAutor("Gabriel García Márquez")
@@ -41,15 +42,16 @@ public class Main {
                         // Confirma la inserción mostrando el libro
                         System.out.println("Libro insertado: " + libro);
 
+                         */
 
-                        /*
+
                         System.out.print("Título: ");
                     String titulo = sc.nextLine();
 
                     System.out.print("Autor: ");
                     String autor = sc.nextLine();
 
-                    System.out.print("Precio: ");
+                    System.out.print("Año: ");
                     double precio = sc.nextDouble();
                     sc.nextLine(); // limpiar buffer
 
@@ -57,14 +59,14 @@ public class Main {
                     Libro libro = new Libro.LibroBuilder()
                             .setTitulo(titulo)
                             .setAutor(autor)
-                            .setPrecio(precio)
                             .setDisponible(true) // por defecto disponible
                             .build();
+                    libroDAO.insertar(libro);
+                    System.out.println("Libro insertado: " + libro);
 
-                    // Insertar en BD
-                    dao.insertar(libro);
-                    System.out.println("✅ Libro agregado correctamente.");
-                         */
+
+
+
                     }
                     case 2 -> {
                         System.out.println("--- LISTA DE LIBROS ---");
